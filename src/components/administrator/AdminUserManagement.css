@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+display:flex;
+height: 100vh;
+justify-content: center;
+align-items: center;
+font-family:'Noto serif';
+background-color:white;
+}
+/* Topbar Styling */
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%; /* Adjust this value to control the width */
+  height: 60px;
+  left: 0;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000; 
+  }
+      
+  .logo h2 {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  color: #4070f4;
+  }
+        
+  .search {
+  display: flex;
+  align-items: center;
+  }
+        
+  .search input {
+  padding: 8px;
+  border-radius: 4px;
+  width: 600px;
+  height: 35px;
+  border: none;
+  outline: none;
+  background: #f5f5f5;
+  }
+        
+  .search label {
+  margin-left: 10px;
+  cursor: pointer;
+  color: #554f4f;
+  font-weight: 700;
+  }
+        
+  .user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  }
+      
+  .topbar h1{
+  font-size: 16px;
+  margin-right: -360px;
+  }
+        
+  /* Sidebar Styling */
+  .sidebar {
+  position:fixed;
+  top: 60px;
+  left: 0;
+  height: 100%;
+  width: 50px;
+  background:#4070f4;
+  padding: 30px 4px;
+  border-radius: 8px;
+  transition: all 0.3s ease;  
+  z-index: 999;
+  }
+      
+  .sidebar.active{
+  width: 240px;
+  }
+      
+  .sidebar #btn{
+  position: absolute;
+  color: white;
+  left:10%;
+  top: 6px;
+  font-size: 24px;
+  height: 35px;
+  width: 33px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateY(-40%);
+  cursor: pointer;
+  }
+                  
+  .sidebar.active #btn{
+  left:88%;
+  }
+        
+  .sidebar ul {
+  margin-top: 20px;
+  }
+        
+  .sidebar ul li {
+  position: relative;
+  height: 50px;
+  width: 90%;
+  margin: 5px 5px;
+  list-style: none;
+  line-height: 30px;
+  }
+      
+  .sidebar ul li .tooltip{
+  position: absolute;
+  left: 60px;
+  height: 35px;
+  top: 50%;
+  margin-top: -25px;
+  transform: translateY(-50%);
+  border-radius: 5px;
+  width: 122px;
+  background: #4070f4;
+  color: white;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  transition: 0s;
+  opacity: 0;
+  pointer-events: none;
+  display: block;
+  }
+      
+  .sidebar.active ul li .tooltip{
+  display: none;
+  }
+                  
+  .sidebar ul li:hover .tooltip{
+  transition: all 0.3s ease;
+  opacity: 1;
+  top: 50%;
+              
+  }
+      
+  .sidebar ul li a {
+  color: white;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.1s ease;
+  border-radius: 5px;
+  white-space: nowrap;
+  }
+        
+  .sidebar ul li a:hover {
+  color: #4070f4;
+  display: flex;
+  background: white;
+  }
+      
+  .sidebar .links-name{
+  opacity: 0;
+  margin-left: 20px;
+  pointer-events: auto;
+  transition: all 0.5s ease;
+  }
+          
+  .sidebar.active .links-name{
+  opacity: 1;
+  pointer-events: auto;
+  }
+        
+  .sidebar ul li a i {
+  height: 20px;
+  min-width: 25px;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;  
+  }
+      
+  .sidebar .navigation{
+  margin-top: 300px;
+  }
+.admin-container {
+display: flex;
+gap: 30px;
+margin-left: -50px;
+margin-top: 70px;
+  }
+.sidebar.active~.admin-container{
+grid-template-columns: repeat(auto-fill, minmax(450px, .38fr));
+margin-left: 340px;
+}
+  h2 {
+  margin-bottom: 20px;
+  }
+  
+  .add-user{
+  background: white;
+  padding: 2rem;
+  width: 450px;
+  height: 360px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(151, 149, 149, 0.8);
+  margin-top: 50px; 
+  }
+  .add-user input, .add-user select {
+  display: block;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  padding: 10px;
+  font-size: 1.2rem;
+  width: 100%;
+  border-radius: 8px;
+  }
+  
+  .add-user button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-user button:hover {
+    background-color: #0056b3;
+  }
+
+  .user-list{
+    background: white;
+    padding: 2rem;
+    width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(151, 149, 149, 0.8);
+    margin-top: 50px;  
+  }
+  
+  .user-list table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .user-list table th, .user-list table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .user-list table th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .user-list button {
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .user-list button:hover {
+    background-color: darkred;
+  }
+  
+  .activity-logs-container{
+    background: white;
+    padding: 2rem;
+    width: 450px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(151, 149, 149, 0.8);
+    margin-top: 50px; 
+  }
+  .activity-logs-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+.activity-logs-container ul li {
+background-color: #e9ecef;
+padding: 10px;
+margin-bottom: 10px;
+border-radius: 5px;
+}
+
+
+
+.bursary-funds-input {
+background: white;
+padding: 2rem;
+width: 450px;
+height: 360px;
+border-radius: 8px;
+box-shadow: 0 0 8px rgba(151, 149, 149, 0.8);
+}
+
+.bursary-funds-input h2{
+margin-top: 10px;
+}
+
+.sidebar.active~.bursary-funds-input{
+  grid-template-columns: repeat(auto-fill, minmax(450px, .38fr));
+  margin-left: 310px;
+  }
+
+.bursary-funds-input input{
+display: block;
+margin-bottom: 20px;
+border: 2px solid #ccc;
+padding: 10px;
+font-size: 1.2rem;
+width: 100%;
+border-radius: 8px;
+}
+
+.bursary-funds-input button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+  

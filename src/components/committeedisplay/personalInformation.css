@@ -1,0 +1,438 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+      
+body {
+font-family: 'Arial', sans-serif;
+background-color: white;
+}
+/* Topbar Styling */
+/* Topbar Styling */
+/* Topbar Styling */
+.topbary {
+    position: fixed;
+    top: 0;
+    width: 100%; /* Adjust this value to control the width */
+    height: 60px;
+    left: 0;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+    }
+    
+    .topbary .bi-bell-fill{
+    font-size: 30px;
+    margin-left: -150px;
+    }
+        
+    .topbary .logoy h2 {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 40px;
+    color: #4070f4;
+    }
+          
+    .searchs {
+    display: flex;
+    align-items: center;
+    }
+          
+    .searchs input {
+    padding: 8px;
+    border-radius: 4px;
+    width: 600px;
+    height: 35px;
+    border: none;
+    outline: none;
+    background: #f5f5f5;
+    }
+          
+    .searchs label {
+    margin-left: 10px;
+    cursor: pointer;
+    color: #554f4f;
+    font-weight: 700;
+    }
+          
+    .usery img {
+    width: 40px;
+    height: 40px;
+    margin-right: -150px;
+    border-radius: 50%;
+    cursor: pointer;
+    }
+        
+    .topbary .welcoming{
+    font-size: 18px;
+    margin-right: -360px;
+    }
+          
+    /* Sidebar Styling */
+    .sidebary {
+    position:fixed;
+    top: 60px;
+    left: 0;
+    height: 100%;
+    width: 50px;
+    background:#4070f4;
+    padding: 30px 4px;
+    border-radius: 8px;
+    transition: all 0.3s ease;  
+    z-index: 999;
+    }
+        
+    .sidebary.active{
+    width: 240px;
+    }
+        
+    .sidebary #btn{
+    position: absolute;
+    color: white;
+    left:10%;
+    top: 6px;
+    font-size: 30px;
+    font-weight: bold;
+    height: 35px;
+    width: 33px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateY(-40%);
+    cursor: pointer;
+    }
+                    
+    .sidebary.active #btn{
+    left:86%;
+    }
+          
+    .sidebary ul {
+    margin-top: 20px;
+    }
+          
+    .sidebary ul li {
+    position: relative;
+    height: 50px;
+    width: 90%;
+    margin: 20px 5px;
+    list-style: none;
+    line-height: 30px;
+    }
+        
+    .sidebary ul li .tooltip{
+    position: absolute;
+    left: 60px;
+    height: 35px;
+    top: 50%;
+    margin-top: -7px;
+    transform: translateY(-50%);
+    border-radius: 5px;
+    width: 122px;
+    background: #4070f4;
+    color: white;
+    font-weight: 600;
+    line-height: 35px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+    }
+        
+    .sidebary.active ul li .tooltip{
+    display: none;
+    }
+                    
+    .sidebary ul li:hover .tooltip{
+    transition: all 0.3s ease;
+    opacity: 1;
+    top: 50%;
+                
+    }
+    
+    .sidebary ul li .tooltipy{
+    position: absolute;
+    left: 60px;
+    height: 35px;
+    top: 50%;
+    margin-top: -7px;
+    transform: translateY(-50%);
+    border-radius: 5px;
+    width: 122px;
+    margin-top: 205px;
+    background: #4070f4;
+    color: white;
+    font-weight: 600;
+    line-height: 35px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+    }
+            
+    .sidebary.active ul li .tooltipy{
+    display: none;
+    }
+                        
+    .sidebary ul li:hover .tooltipy{
+    transition: all 0.3s ease;
+    opacity: 1;
+    top: 50%;
+                    
+    }
+        
+    .sidebary ul li a {
+    color: white;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.1s ease;
+    border-radius: 5px;
+    white-space: nowrap;
+    }
+          
+    .sidebary ul li a:hover {
+    color: #4070f4;
+    display: flex;
+    background: white;
+    }
+        
+    .sidebary .links-name{
+    opacity: 0;
+    margin-left: 20px;
+    pointer-events: auto;
+    transition: all 0.5s ease;
+    }
+            
+    .sidebary.active .links-name{
+    opacity: 1;
+    pointer-events: auto;
+    }
+          
+    .sidebary ul li a i {
+    height: 20px;
+    min-width: 25px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;  
+    }
+        
+    .sidebary .navigation{
+    margin-top: 300px;
+    }
+        
+.combined-container {
+display: flex;
+flex-direction: row;
+gap: 30px;
+margin: 20px;
+margin-left: 100px;
+}
+.sidebary.active~.combined-container{
+grid-template-columns: repeat(auto-fill, minmax(450px, .38fr));
+margin-left: 280px;
+}
+/* Common Identifier Styles */
+.common-identifier {
+background-color:white;
+padding: 5px;
+margin-top: 250px;
+border-radius: 8px;
+width: 93%;
+margin-left: 100px;
+margin-bottom: 10px;
+}
+  
+.common-identifier h1 {
+font-size: 24px;
+color: black;
+margin-bottom: 10px;
+}
+  
+.common-identifier p {
+font-size: 20px;
+margin: 5px 0;
+font-weight: bold;
+}
+  
+.ptable-container, .atable-container {
+border-radius: 8px;
+padding: 10px;
+background-color:white;
+box-shadow: 0 0 8px rgba(151, 149, 149, 0.8);
+width: 40%; /* Adjust width to fit side by side */
+}
+  
+.ptable-container h2, .atable-container h2 {
+text-align: center;
+font-size: 30px;
+margin-bottom: 15px;
+margin-top:10px ;
+color: #333;
+}
+  
+.data-item {
+display: grid;
+grid-template-columns: 2fr 1.2fr; /* Adjust the columns width as needed */
+gap: 5px; /* Adds spacing between columns */
+margin-bottom: 15px;
+padding: 10px;
+text-align: left;
+border-bottom: 1px solid #ddd;
+}
+  
+.data-item span {
+font-weight: bold;
+color: black;
+margin-bottom: 5px; /* Adds spacing between vertical items */
+}
+  
+.data-item p {
+margin: 0;
+color:black;
+padding-left: 5px; /* Adds space between the value and the column edge */
+}
+  
+.viewButton {
+display: flex;
+justify-content: center;
+margin-top: 15px;
+}
+  
+.viewButton button {
+padding: 8px 15px;
+background-color: #007bff;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+  
+.viewButton button:hover {
+background-color: #0056b3;
+}
+  
+.allButton {
+display: flex;
+justify-content: center;
+margin-top: 20px;
+}
+  
+.allButton button {
+padding: 10px 20px;
+background-color: #28a745;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+  
+.allButton button:hover {
+background-color: #218838;
+}
+
+.combined-containers {
+display: flex;
+flex-direction: row;
+gap: 20px;
+margin: 20px;
+}
+.combined-containers .ptable-container, .atable-container {
+border-radius: 8px;
+padding: 20px;
+background-color: #f9f9f9;
+box-shadow: 0 0 8px rgba(151, 149, 149, 0.8);
+width: 48%; /* Adjust width to fit side by side */
+}
+      
+.combined-containers .ptable-container h1, .atable-container h1 {
+text-align: center;
+font-size: 1.5rem;
+margin-bottom: 15px;
+color: #333;
+} 
+.combined-containers .data-item {
+display: grid;
+grid-template-columns: 1fr 2fr; /* Adjust the columns width as needed */
+gap: 5px; /* Adds spacing between columns */
+margin-bottom: 15px;
+padding: 8px;
+text-align: left;
+border-bottom: 1px solid #ddd;
+}
+      
+.combined-containers .data-item span {
+font-weight: bold;
+color:black;
+margin-bottom: 5px; /* Adds spacing between vertical items */
+}
+      
+.combined-containers .data-item p {
+margin: 0;
+color: black;
+padding-left: 5px; /* Adds space between the value and the column edge */
+}
+      
+.combined-containers .viewButton {
+display: flex;
+justify-content: center;
+margin-top: 15px;
+}
+      
+.viewButton button {
+padding: 8px 15px;
+background-color: #007bff;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+      
+.viewButton button:hover {
+background-color: #0056b3;
+}
+      
+.aprrove {
+display: flex;
+justify-content: center;
+margin-top: 20px;
+}
+      
+.approve button {
+padding: 10px 20px;
+background-color: #28a745;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.reject {
+display: flex;
+justify-content: center;
+margin-top: 20px;
+}
+          
+    .reject button {
+    padding: 10px 20px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    }
+    

@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+display:flex;
+height: 100vh;
+justify-content: center;
+align-items: center;
+font-family:'Noto serif';
+background-color:white;
+}
+
+/* Container Styling */
+.signin-container {
+background: white;
+padding: 2rem;
+width: 450px;
+border-radius: 8px;
+box-shadow: 0 0 8px rgba(151, 149, 149, 0.8);
+}
+
+/* Form Styling */
+.signin-container form {
+width: 100%;
+max-width: 400%;
+}
+
+/* Form Header */
+.signin-container h2 {
+text-transform: uppercase;
+font-size: 25px;
+text-align: center;
+color: black;
+margin-top: -20px;
+font-weight: bold;
+    
+}
+
+/* Input Group Styling */
+.signin-container .input-group {
+margin-bottom: 1.5rem;
+margin-top: 1.5rem;
+}
+
+.signin-container .input-group label {
+display: flex;
+margin-bottom: 0.5rem;
+font-weight: bold;
+color: grey;
+font-size: 1.2rem;
+}
+
+.signin-container .input-group input {
+width: 100%;
+padding: 0.55rem;
+border: 2px solid #ccc;
+border-radius: 8px;
+font-size: 1.2rem;
+}
+
+.signin-container .password-container {
+position: relative;
+    
+}
+
+.signin-container .password-container input {
+width: 100%;
+padding: 0.55rem;
+padding-right: 2.5rem; /* Extra padding to accommodate the eye icon */
+border: 2px solid #ccc;
+border-radius: 8px;
+}
+
+.signin-container .toggle-password {
+position: absolute;
+top: 50%;
+margin-left: -35px;
+font-size: 25px;
+margin-top: 6px;
+transform: translateY(-50%);
+color: grey;
+cursor: pointer;
+}
+
+.signin-container .input-check input{
+height: 18px;
+width: 18px;
+margin-left: 10px;
+margin-bottom: 10px;
+
+}
+
+.signin-container .input-check label{
+font-size: 1.2rem;
+color: grey;
+margin-left: 5px;
+margin-top: 5px;
+   
+   
+}
+
+.signin-container .forgot-password-link{
+margin-left: 50px;
+margin-top: 5px;
+font-size: 1.2rem;
+background-color: white;
+color:#0056b3;
+border: none;
+text-decoration: none;
+margin-bottom: 10px;
+}
+
+.signin-container .forgot-password-link:hover{
+color: purple;
+}
+
+/* Button Styling */
+ .signin-container [type="submit"] {
+width: 100%;
+background-color: #0056b3;
+color: white;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+font-size: 18px;
+margin-top: 10px;
+border-radius: 4px;
+font-weight: bold;
+}
+
+.signin-container [type="submit"]:hover {
+background-color: #007bff;
+}
+
+/* Button Styling */
+ .signin-container [type="submits"] {
+width: 100%;
+background-color:rgb(68, 161, 204);
+color: white;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+text-align: center;
+font-size: 18px;
+margin-top: 10px;
+border-radius: 4px;
+font-weight: bold;
+}
+
+.signin-container [type="submits"]:hover{
+background-color: rgb(9, 131, 161);
+}
+
+.signin-container .signup{
+margin-top: 20px;
+font-size: 1.2rem;
+margin-left: 50px;
+color:gray;
+}
+
+.signin-container .signup a{
+text-decoration: none;
+}
+.signin-container .error-message{
+color: red;
+font-size: 1em; 
+font-weight: 600;
+margin-top: 5px; 
+text-align: left;
+}
+
+.ForgotVerify{
+background: white;
+padding: 2rem;
+width: 450px;
+border-radius: 8px;
+box-shadow: 0 0 8px rgba(151, 149, 149, 0.8);
+}
+
+.ForgotVerify form{
+text-align: left;
+}
+
+.ForgotVerify h1{
+font-size: 30px;
+}
+
+.ForgotVerify p{
+font-size: 20px;
+text-align: left;
+margin-bottom: 20px;
+line-height: 1.5;
+}
+
+
+.ForgotVerify form label{
+text-align: left;
+font-size: 20px;
+}
+
+.ForgotVerify form input{
+height: 40px;
+width: 95%;
+margin-bottom: 20px;
+border-radius: 5px;
+font-weight: 400;
+outline: none;
+border: 1.8px solid #ccc;
+padding: 0 10px;
+font-size: 20px;
+}
+
+.ForgotVerify form input:focus{
+    border: 2.5px solid black; /* Change to blue on focus */
+    outline: none; /* Remove the default outline */
+}
+
+@media (max-width: 600px) {
+
+/* Container Styling */
+.signin-container {
+background: white;
+padding: 2rem;
+width: 340px;
+border-radius: 8px;
+box-shadow: 0 0 8px rgba(151, 149, 149, 0.8);
+}
+    
+    /* Form Styling */
+.signin-container form {
+width: 100%;
+max-width: 400%;
+    }
+    
+    /* Form Header */
+    .signin-container h2 {
+    text-transform: uppercase;
+    font-size: 2em;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+        
+    }
+    
+    /* Input Group Styling */
+    .signin-container .input-group {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    }
+    
+    .signin-container .input-group label {
+    display: flex;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: grey;
+    font-size: 1.2rem;
+    }
+    
+    .signin-container .input-group input {
+    width: 100%;
+    padding: 0.55rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    }
+    
+    .signin-container .password-container {
+    position: relative;
+        
+    }
+    
+    .signin-container .password-container input {
+    width: 100%;
+    padding: 0.55rem;
+    padding-right: 2.5rem; /* Extra padding to accommodate the eye icon */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    }
+    
+    .signin-container .toggle-password {
+    position: absolute;
+    top: 50%;
+    margin-left: -35px;
+    font-size: 25px;
+    margin-top: 6px;
+    transform: translateY(-50%);
+    color: grey;
+    cursor: pointer;
+    }
+    
+    .signin-container .input-check input{
+    height: 18px;
+    width: 18px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    
+    }
+    
+    .signin-container .input-check label{
+    font-size: 1.2rem;
+    color: grey;
+    margin-left: 5px;
+    margin-top: 5px;
+       
+       
+    }
+    
+    .signin-container .forgot-password-link{
+    margin-left: 50px;
+    margin-top: 5px;
+    font-size: 1.2rem;
+    background-color: white;
+    color:#0056b3;
+    border: none;
+    text-decoration: none;
+    margin-bottom: 10px;
+    }
+    
+    .signin-container .forgot-password-link:hover{
+    color: purple;
+    }
+    
+    /* Button Styling */
+     .signin-container [type="submit"] {
+    width: 100%;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    }
+    
+    .signin-container [type="submit"]:hover {
+    background-color: #007bff;
+    }
+    
+    /* Button Styling */
+     .signin-container [type="submits"] {
+    width: 100%;
+    background-color:rgb(68, 161, 204);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    }
+    
+    .signin-container [type="submits"]:hover{
+    background-color: rgb(9, 131, 161);
+    }
+    
+    .signin-container .signup{
+    margin-top: 20px;
+    font-size: 1.2rem;
+    margin-left: 50px;
+    color:gray;
+    }
+    
+    .signin-container .signup a{
+    text-decoration: none;
+    }
+    .signin-container .error-message{
+    color: red;
+    font-size: 1em; 
+    font-weight: 600;
+    margin-top: 5px; 
+    text-align: left;
+    }
+    
+}
+
+
